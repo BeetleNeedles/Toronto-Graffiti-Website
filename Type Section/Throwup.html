@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>Toronto Graffiti</title>
+            <link rel="stylesheet" href="../css/Graffiti Web.css">
+            <link rel="stylesheet" href="https://use.typekit.net/jlk0usg.css">
+        </head>
+<body>
+
+    <div class="HEAD">
+        <h1> <a href="../Graffiti Web.html">Toronto Graffiti </a></h1>
+        
+        <nav>
+            <ul>
+                   <li>
+                       <a href="#">Search by List ▼</a>
+                       <ul>
+                           <li><a href="../Graffiti Street Select.html">Street Names</a></li>
+                           <li><a href="../GraffType Select.html">Graffiti Types</a></li>
+            
+                       </ul>
+                   </li>
+                   <li>
+                    <!--Random-->
+                    <script>
+                        var sites = [
+                        '../Photo IDs/BUY KILL SELL.html', 
+                        '../Photo Ids/Bathroom Vandalism.html',
+                        '../Photo Ids/Above Ground Birds.html',
+                        '../Photo Ids/Bubbles.html',
+                        '../Photo Ids/Dont Tear me Down.html',
+                        '../Photo Ids/Floral.html',
+                        '../Photo Ids/IMG5891.html',
+                        '../Photo Ids/INKNBY.html',
+                        '../Photo Ids/Passing By.html',
+                        '../Photo Ids/Streetcar View.html',
+                        '../Photo Ids/We Create Illusion.html',
+                        '../Photo Ids/ACAB.html',
+                        '../Photo Ids/Smiley Cone.html',
+                        '../Photo Ids/Ad Block.html',
+                        '../Photo Ids/Moomins.html',
+                        '../Photo Ids/Dissociate.html',
+                        '../Photo Ids/Garage Door.html',
+                        '../Photo Ids/Stone Bench.html',
+                        ];
+                    
+                        function randomSite() {
+                            var i = parseInt(Math.random() * sites.length);
+                            location.href = sites[i];
+                        }
+                    </script>
+
+                    <a href="#" onclick="randomSite();">Random</a>
+                   </li>
+                  <li><a href="../Graffiti About.html">About</a></li>
+             </ul>
+        </nav>
+        </div>
+<!-- NAVIGATION BAR END-->
+
+<section>
+    <div class="IMGSelect">
+
+        <div class= "item img1">
+        <a href="../Photo IDs/Bubbles.html">
+        <img src="../Images/Graffiti/Throw Up/Bubbles.JPG" id="select">
+        </a>
+        </div>
+
+        <div class= "item img2">
+            <a href="../Photo IDs/IMG5891.html">
+        <img src="../Images/Graffiti/Throw Up/IMG5891.JPG" id="select">
+        </a>
+        </div>
+
+        <div class= "item img3">
+        <a href="../Photo IDs/Passing By.html">
+        <img src="../Images/Graffiti/Throw Up/Passing By.JPG" id="select">
+        </a>
+        </div>
+            
+    </div>
+</section>
