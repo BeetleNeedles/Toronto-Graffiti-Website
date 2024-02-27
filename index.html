@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>Toronto Graffiti</title>
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="css/Graffiti Web.css">
+            
+            <link rel="stylesheet" href="https://use.typekit.net/jlk0usg.css">
+
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <style>#mapid { height: 600px; }</style>
+    
+        </head>
+
+<body>
+
+    <div class="HEAD">
+        <h1> <a href="index.html">Toronto Graffiti </a></h1>
+        
+        <nav>
+            <ul>
+                   <li>
+                       <a href="#">Search by List ▼</a>
+                       <ul>
+                           <li><a href="Graffiti Street Select.html">Street Names</a></li>
+                           <li><a href="GraffType Select.html">Graffiti Types</a></li>
+            
+                       </ul>
+                   </li>
+                   <li>
+                    <!--Random-->
+                    <script>
+                        var sites = [
+                        'Photo IDs/BUY KILL SELL.html', 
+                        'Photo Ids/Bathroom Vandalism.html',
+                        'Photo Ids/Above Ground Birds.html',
+                        'Photo Ids/Bubbles.html',
+                        'Photo Ids/Dont Tear me Down.html',
+                        'Photo Ids/Floral.html',
+                        'Photo Ids/IMG5891.html',
+                        'Photo Ids/INKNBY.html',
+                        'Photo Ids/Passing By.html',
+                        'Photo Ids/Streetcar View.html',
+                        'Photo Ids/We Create Illusion.html',
+                        'Photo Ids/ACAB.html',
+                        'Photo Ids/Smiley Cone.html',
+                        'Photo Ids/Ad Block.html',
+                        'Photo Ids/Moomins.html',
+                        'Photo Ids/Dissociate.html',
+                        'Photo Ids/Garage Door.html',
+                        'Photo Ids/Stone Bench.html',
+                        ];
+                    
+                        function randomSite() {
+                            var i = parseInt(Math.random() * sites.length);
+                            location.href = sites[i];
+                        }
+                    </script>
+
+                    <a href="#" onclick="randomSite();">Random</a>
+                   </li>
+                  <li><a href="Graffiti About.html">About</a></li>
+             </ul>
+        </nav>
+        </div>
+
+        <!--INTERACTIVE MAP-->
+        <div id="mapid"></div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+         <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+     crossorigin=""></script>
+        <script>
+        var map = L.map('mapid').setView([43.65847,-79.39329], 13);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    
+    L.marker([43.66302, -79.40834]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Bathroom Vandalism.html"><img src="Images/Graffiti/Thumbnails/Bathroom Vandalism.jpg"></a>')
+        .openPopup();
+        L.marker([43.65377, -79.39107]).addTo(map)
+        .bindPopup('<a href="Photo IDs/BUY KILL SELL.html"><img src="Images/Graffiti/Thumbnails/BUY KILL SELL.JPG"></a>')
+        .openPopup();
+        L.marker([43.6536, -79.39101]).addTo(map)
+        .bindPopup('<a href="Photo IDs/No Fun.html"><img src="Images/Graffiti/Thumbnails/No Fun.JPG"></a>')
+        .openPopup();
+        L.marker([43.65478, -79.38777]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Garage Door.html"><img src="Images/Graffiti/Thumbnails/Garage Door.JPG"></a>')
+        .openPopup();
+        L.marker([43.65255, -79.39082]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Above Ground Birds.html"><img src="Images/Graffiti/Thumbnails/Above Ground Birds.JPG"></a>')
+        .openPopup();
+        L.marker([43.65551, -79.38433]).addTo(map)
+        .bindPopup('<a href="Photo IDs/ACAB.html"><img src="Images/Graffiti/Thumbnails/ACAB.JPG"></a>')
+        .openPopup();
+        L.marker([43.65544, -79.38466]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Ad Block.html"><img src="Images/Graffiti/Thumbnails/Ad Block.JPG"></a>')
+        .openPopup();
+        L.marker([43.66019, -79.45369]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Bubbles.html"><img src="Images/Graffiti/Thumbnails/Bubbles.JPG"></a>')
+        .openPopup();
+        L.marker([43.66, -79.45364]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Floral.html"><img src="Images/Graffiti/Thumbnails/Floral.JPG"></a>')
+        .openPopup();
+        L.marker([43.65506, -79.38639]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Dissociate.html"><img src="Images/Graffiti/Thumbnails/Dissociate.JPG"></a>')
+        .openPopup();
+        L.marker([43.65545,-79.38458]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Dont Tear me Down.html"><img src="Images/Graffiti/Thumbnails/Dont Tear me Down.JPG"></a>')
+        .openPopup();
+        L.marker([43.65366,-79.39422]).addTo(map)
+        .bindPopup('<a href="Photo IDs/IMG5891.html"><img src="Images/Graffiti/Thumbnails/IMG5891.JPG"></a>')
+        .openPopup();
+        L.marker([43.65454,-79.38970]).addTo(map)
+        .bindPopup('<a href="Photo IDs/INKNBY.html"><img src="Images/Graffiti/Thumbnails/INKNBY.JPG"></a>')
+        .openPopup();
+        L.marker([43.65296,-79.39123]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Moomins.html"><img src="Images/Graffiti/Thumbnails/Moomins.JPG"></a>')
+        .openPopup();
+        L.marker([43.65416405 -79.451748193]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Passing By.html"><img src="Images/Graffiti/Thumbnails/Passing By.JPG"></a>')
+        .openPopup();
+        L.marker([43.65364,-79.39106]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Smiley Cone.html"><img src="Images/Graffiti/Thumbnails/Smiley Cone.JPG"></a>')
+        .openPopup();
+        L.marker([43.66572654102576, -79.49117528253389]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Stone Bench.html"><img src="Images/Graffiti/Thumbnails/Stone Bench.JPG"></a>')
+        .openPopup();
+        L.marker([43.65680,-79.45303]).addTo(map)
+        .bindPopup('<a href="Photo IDs/Streetcar View.html"><img src="Images/Graffiti/Thumbnails/Streetcar View.JPG"></a>')
+        .openPopup();
+        L.marker([43.65461,-79.38847]).addTo(map)
+        .bindPopup('<a href="Photo IDs/We Create Illusion.html"><img src="Images/Graffiti/Thumbnails/We Create Illusion.JPG"></a>')
+        .openPopup();
+        </script>
+        <!--MAP MARKERS-->
+
+</body>
+
+            
